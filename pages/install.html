@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+  <h1>Verifica ed installa il certificato</h1>
+  <p>Questa pagina contiene le informazioni di installazione per i diversi sistemi operativi e browser</p>
+
+  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Linux
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+      <h2>Debian e derivate</h2>
+      <p>Per debian e ubuntu è sufficiente scaricare/copiare il certificato nell'apposita cartella quindi aggiornare la lista dei certificati noti.</p>
+      <p><code>aptitude install ca-certificates</code></p>
+      <p><code>mv ninux-ca.crt /usr/local/share/ca-certificates/ninux-ca.crt</code></p>
+      <p><code>update-ca-certificates</code></p>
+      </code>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Mac OS X
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        TODO
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Android
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Per installare il certificato sul tuo cellulare android hai bisogno di <kbd>adb</kbd></p>
+        <p><code>adb push ninux-ca.crt /sdcard/</code></p>
+        <p>Quindi sul dispositivo andare in <strong>Impostazioni -> Sicurezza -> Installa da memoria dispositivo</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          iPhone
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        TODO
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Windows
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        TODO
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+          Browsers
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h2>Chrome/Chromium</h2>
+        <p>Una volta scaricato il certificato andare su <strong>Impostazioni</strong> scorrere la lista fino a trovare il link <strong>Mostra impostazioni avanzate ...</strong> nella sessione <strong>HTTPS/SSL</strong> cliccare sul pulsante <strong>Gestisti certificati</strong> quindi <strong>Importa...</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
